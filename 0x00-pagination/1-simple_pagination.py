@@ -1,3 +1,4 @@
+#!/usr/bin/env python3
 """This module define a Server class and index_range function
 """
 import csv
