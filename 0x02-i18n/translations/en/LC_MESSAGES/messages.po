@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2024-01-09 16:29+0000\n"
+"POT-Creation-Date: 2024-01-09 18:39+0000\n"
 "PO-Revision-Date: 2024-01-09 16:29+0000\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: en\n"
@@ -18,20 +18,27 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.9.1\n"
 
-#: 3-app.py:35 4-app.py:38 5-app.py:62
+#: 3-app.py:35 4-app.py:38 5-app.py:65 6-app.py:71 7-app.py:95 app.py:96
 msgid "Welcome to Holberton"
 msgstr "Welcome to Holberton"
 
-#: 3-app.py:36 4-app.py:39 5-app.py:63
+#: 3-app.py:36 4-app.py:39 5-app.py:66 6-app.py:72 7-app.py:96 app.py:97
 msgid "Hello world!"
 msgstr "Hello world!"
 
-#: templates/5-index.html:11
+#: templates/5-index.html:11 templates/6-index.html:11
+#: templates/7-index.html:11 templates/index.html:11
 #, python-format
 msgid "You are logged in as %(username)s."
 msgstr "You are logged in as %(username)s."
 
-#: templates/5-index.html:13
+#: templates/5-index.html:13 templates/6-index.html:13
+#: templates/7-index.html:13 templates/index.html:13
 msgid "You are not logged in."
 msgstr "You are not logged in."
+
+#: templates/index.html:15
+#, python-format
+msgid "The current time is %(current_time)s."
+msgstr "The current time is %(current_time)s."
 

@@ -79,7 +79,7 @@ def get_timezone():
     try:
         user = g.user
         if user:
-            timez = timezone(user.timezone)
+            timez = timezone(user.get("timezone"))
             return timez
     except UnknownTimeZoneError:
         pass
@@ -95,4 +95,4 @@ def home() -> Response:
             home_title=_("Welcome to Holberton"),
             home_header=_("Hello world!"),
             user=g.user)
-    return render_template("6-index.html", **context)
+    return render_template("7-index.html", **context)
