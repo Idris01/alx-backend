@@ -2,9 +2,11 @@
 """This module define a flask aoplication
 """
 from flask import (
-        Flask, render_template, request, g)
+        Flask, render_template,
+        request, g, Response)
 from flask_babel import Babel
 from flask_babel import gettext as _
+from typing import Dict, Union
 
 users = {
     1: {"name": "Balou", "locale": "fr", "timezone": "Europe/Paris"},
@@ -27,7 +29,7 @@ app.config.from_object(Config)
 babel = Babel(app)
 
 
-def get_user():
+def get_user() -> Union[Dict, None]:
     """Get user based on the url param login_as
     """
     user_id = request.args.get("login_as", None)
@@ -37,7 +39,7 @@ def get_user():
 
 
 @app.before_request
-def before_request():
+def before_request() -> None:
     """Run before any request is processed
     """
     user = get_user()
@@ -45,7 +47,7 @@ def before_request():
 
 
 @babel.localeselector
-def get_locale():
+def get_locale() -> str:
     """Get user prefered language
     """
     locale = request.args.get('locale', None)
@@ -56,7 +58,7 @@ def get_locale():
 
 
 @app.route('/')
-def home():
+def home() -> Response:
     """define the index page of the app
     """
     context = dict(
